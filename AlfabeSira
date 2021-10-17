@@ -1,0 +1,242 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+namespace AlfabeSıra
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] Alfabe={"A","B","C","Ç","D","E","F","G","Ğ","H","I","İ","J","K","L","M","N","O","Ö","P","R","S","Ş","T","U","Ü","V","Y","Z"};
+            Stopwatch stopwatch = new Stopwatch();
+
+            Console.Write("Bir Harf Giriniz :");
+            string harf = Console.ReadLine();
+            stopwatch.Start();
+            if (harf.ToUpper() == "A")
+            {
+                Console.WriteLine("A harfi alfabenin 1. harfidir.");
+            }
+            else if (harf.ToUpper() == "B")
+            {
+                Console.WriteLine("B harfi alfabenin 2. harfidir.");
+            }
+            else if (harf.ToUpper() == "C")
+            {
+                Console.WriteLine("C harfi alfabenin 3. harfidir.");
+            }
+            else if (harf.ToUpper() == "Ç")
+            {
+                Console.WriteLine("Ç harfi alfabenin 4. harfidir.");
+            }
+            else if (harf.ToUpper() == "D")
+            {
+                Console.WriteLine("D harfi alfabenin 5. harfidir.");
+            }
+            else if (harf.ToUpper() == "E")
+            {
+                Console.WriteLine("E harfi alfabenin 6. harfidir.");
+            }
+            else if (harf.ToUpper() == "F")
+            {
+                Console.WriteLine("F harfi alfabenin 7. harfidir.");
+            }
+            else if (harf.ToUpper() == "G")
+            {
+                Console.WriteLine("G harfi alfabenin 8. harfidir.");
+            }
+            else if (harf.ToUpper() == "Ğ")
+            {
+                Console.WriteLine("Ğ harfi alfabenin 9. harfidir.");
+            }
+            else if (harf.ToUpper() == "H")
+            {
+                Console.WriteLine("H harfi alfabenin 10. harfidir.");
+            }
+            else if (harf.ToUpper() == "I")
+            {
+                Console.WriteLine("I harfi alfabenin 11. harfidir.");
+            }
+            else if (harf.ToUpper() == "İ")
+            {
+                Console.WriteLine("İ harfi alfabenin 12. harfidir.");
+            }
+            else if (harf.ToUpper() == "J")
+            {
+                Console.WriteLine("J harfi alfabenin 13. harfidir.");
+            }
+            else if (harf.ToUpper() == "K")
+            {
+                Console.WriteLine("K harfi alfabenin 14. harfidir.");
+            }
+            else if (harf.ToUpper() == "L")
+            {
+                Console.WriteLine("L harfi alfabenin 15. harfidir.");
+            }
+            else if (harf.ToUpper() == "M")
+            {
+                Console.WriteLine("M harfi alfabenin 16. harfidir.");
+            }
+            else if (harf.ToUpper() == "N")
+            {
+                Console.WriteLine("N harfi alfabenin 17. harfidir.");
+            }
+            else if (harf.ToUpper() == "O")
+            {
+                Console.WriteLine("O harfi alfabenin 18. harfidir.");
+            }
+            else if (harf.ToUpper() == "Ö")
+            {
+                Console.WriteLine("Ö harfi alfabenin 19. harfidir.");
+            }
+            else if (harf.ToUpper() == "P")
+            {
+                Console.WriteLine("P harfi alfabenin 20. harfidir.");
+            }
+            else if (harf.ToUpper() == "R")
+            {
+                Console.WriteLine("R harfi alfabenin 21. harfidir.");
+            }
+            else if (harf.ToUpper() == "S")
+            {
+                Console.WriteLine("S harfi alfabenin 22. harfidir.");
+            }
+            else if (harf.ToUpper() == "Ş")
+            {
+                Console.WriteLine("Ş harfi alfabenin 23. harfidir.");
+            }
+            else if (harf.ToUpper() == "T")
+            {
+                Console.WriteLine("T harfi alfabenin 24. harfidir.");
+            }
+            else if (harf.ToUpper() == "U")
+            {
+                Console.WriteLine("U harfi alfabenin 25. harfidir.");
+            }
+            else if (harf.ToUpper() == "Ü")
+            {
+                Console.WriteLine("Ü harfi alfabenin 26. harfidir.");
+            }
+            else if (harf.ToUpper() == "V")
+            {
+                Console.WriteLine("V harfi alfabenin 27. harfidir.");
+            }
+            else if (harf.ToUpper() == "Y")
+            {
+                Console.WriteLine("Y harfi alfabenin 28. harfidir.");
+            }
+            else if (harf.ToUpper() == "Z")
+            {
+                Console.WriteLine("Z harfi alfabenin 29. harfidir.");
+            }
+            else
+            {
+                Console.WriteLine("Hatalı Giriş Yaptınız..");
+            }
+            stopwatch.Stop();
+            Console.WriteLine("Çalışma Zamanı :" + stopwatch.Elapsed);
+
+            stopwatch.Start();
+            switch (harf.ToUpper())
+            {
+                case "A":
+                    Console.WriteLine("A harfi alfabenin 1. harfidir.");
+                    break;
+                case "B":
+                    Console.WriteLine("B harfi alfabenin 2. harfidir.");
+                    break;
+                case "C":
+                    Console.WriteLine("C harfi alfabenin 3. harfidir.");
+                    break;
+                case "Ç":
+                    Console.WriteLine("Ç harfi alfabenin 4. harfidir.");
+                    break;
+                case "D":
+                    Console.WriteLine("D harfi alfabenin 5. harfidir.");
+                    break;
+                case "E":
+                    Console.WriteLine("E harfi alfabenin 6. harfidir.");
+                    break;
+                case "F":
+                    Console.WriteLine("F harfi alfabenin 7. harfidir.");
+                    break;
+                case "G":
+                    Console.WriteLine("G harfi alfabenin 8. harfidir.");
+                    break;
+                case "Ğ":
+                    Console.WriteLine("Ğ harfi alfabenin 9. harfidir.");
+                    break;
+                case "H":
+                    Console.WriteLine("H harfi alfabenin 10. harfidir.");
+                    break;
+                case "I":
+                    Console.WriteLine("I harfi alfabenin 11. harfidir.");
+                    break;
+                case "İ":
+                    Console.WriteLine("İ harfi alfabenin 12. harfidir.");
+                    break;
+                case "J":
+                    Console.WriteLine("J harfi alfabenin 13. harfidir.");
+                    break;
+                case "K":
+                    Console.WriteLine("K harfi alfabenin 14. harfidir.");
+                    break;
+                case "L":
+                    Console.WriteLine("L harfi alfabenin 15. harfidir.");
+                    break;
+                case "M":
+                    Console.WriteLine("M harfi alfabenin 16. harfidir.");
+                    break;
+                case "N":
+                    Console.WriteLine("N harfi alfabenin 17. harfidir.");
+                    break;
+                case "O":
+                    Console.WriteLine("O harfi alfabenin 18. harfidir.");
+                    break;
+                case "Ö":
+                    Console.WriteLine("Ö harfi alfabenin 19. harfidir.");
+                    break;
+                case "P":
+                    Console.WriteLine("P harfi alfabenin 20. harfidir.");
+                    break;
+                case "R":
+                    Console.WriteLine("R harfi alfabenin 21. harfidir.");
+                    break;
+                case "S":
+                    Console.WriteLine("S harfi alfabenin 22. harfidir.");
+                    break;
+                case "Ş":
+                    Console.WriteLine("Ş harfi alfabenin 23. harfidir.");
+                    break;
+                case "T":
+                    Console.WriteLine("T harfi alfabenin 24. harfidir.");
+                    break;
+                case "U":
+                    Console.WriteLine("U harfi alfabenin 25. harfidir.");
+                    break;
+                case "Ü":
+                    Console.WriteLine("Ü harfi alfabenin 26. harfidir.");
+                    break;
+                case "V":
+                    Console.WriteLine("V harfi alfabenin 27. harfidir.");
+                    break;
+                case "Y":
+                    Console.WriteLine("Y harfi alfabenin 28. harfidir.");
+                    break;
+                case "Z":
+                    Console.WriteLine("Z harfi alfabenin 29. harfidir.");
+                    break;
+                default:
+                    Console.WriteLine("Hatalı Giriş Yaptınız..");
+                    break;
+            }
+            stopwatch.Stop();
+            Console.WriteLine("Çalışma Zamanı :" + stopwatch.Elapsed);
+            Console.ReadKey();
+        }
+    }
+}
