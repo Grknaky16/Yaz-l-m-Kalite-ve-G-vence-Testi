@@ -1,0 +1,152 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+
+namespace QuickSortDemo
+{
+    public class Mergesort
+    {
+        public void merge(int[] arr, int p, int q, int r)
+        {
+            int i, j, k;
+            int n1 = q - p + 1;
+            int n2 = r - q;
+            int[] L = new int[n1];
+            int[] R = new int[n2];
+            for (i = 0; i < n1; i++)
+            {
+                L[i] = arr[p + i];
+            }
+            for (j = 0; j < n2; j++)
+            {
+                R[j] = arr[q + 1 + j];
+            }
+            i = 0;
+            j = 0;
+            k = p;
+            while (i < n1 && j < n2)
+            {
+                if (L[i] <= R[j])
+                {
+                    arr[k] = L[i];
+                    i++;
+                }
+                else
+                {
+                    arr[k] = R[j];
+                    j++;
+                }
+                k++;
+            }
+            while (i < n1)
+            {
+                arr[k] = L[i];
+                i++;
+                k++;
+            }
+            while (j < n2)
+            {
+                arr[k] = R[j];
+                j++;
+                k++;
+            }
+        }
+        public void mergeSort(int[] arr, int p, int r)
+        {
+            if (p < r)
+            {
+                int q = (p + r) / 2;
+                mergeSort(arr, p, q);
+                mergeSort(arr, q + 1, r);
+                merge(arr, p, q, r);
+            }
+        }
+        
+    }
+    public class bucketsort
+    {
+        public int[] bucketSort(int[] dizi)
+        {
+            int minValue = dizi[0];
+            int maxValue = dizi[0];
+
+            for (int i = 1; i < dizi.Length; i++)
+            {
+                if (dizi[i] > maxValue)
+                    maxValue = dizi[i];
+                if (dizi[i] < minValue)
+                    minValue = dizi[i];
+            }
+
+            int m = maxValue - minValue + 1;
+
+            List<int>[] bucket = new List<int>[m];
+
+            for (int i = 0; i < bucket.Length; i++)
+            {
+                bucket[i] = new List<int>();
+            }
+
+            for (int i = 0; i < dizi.Length; i++)
+            {
+                bucket[dizi[i] - minValue].Add(dizi[i]);
+            }
+
+
+            int k = 0;
+            for (int i = 0; i < bucket.Length; i++)
+            {
+                if (bucket[i].Count > 0)
+                {
+                    for (int j = 0; j < bucket[i].Count; j++)
+                    {
+                        dizi[k] = bucket[i][j];
+                         k++;
+                    }
+                }
+            }
+            return dizi;
+        }
+    }
+    public class Program
+    {
+
+
+        static void Main()
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            int[] arr = { 76, 89, 23, 1, 55, 78, 99 };
+
+            int n = arr.Length;
+            bucketsort bs = new bucketsort();
+
+            bs.bucketSort(arr);
+            stopwatch.Start();
+            Console.Write("Bucket Sort :");
+            foreach (float el in arr)
+            {
+                Console.Write(el + " ");
+            }
+            stopwatch.Stop();
+            Console.WriteLine("\nbucket çalışma zamanı:" + stopwatch.Elapsed);
+
+            int z = arr.Length, i;
+            
+            Mergesort ms = new Mergesort();
+
+            stopwatch.Start();
+            ms.mergeSort(arr, 0, z - 1);
+            Console.Write("\nMerge Sort : ");
+            for (i = 0; i < z; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+            stopwatch.Stop();
+            Console.WriteLine("\nÇalışma Süresi: " + stopwatch.Elapsed);
+            Console.ReadKey();
+
+        }
+    }
+}
