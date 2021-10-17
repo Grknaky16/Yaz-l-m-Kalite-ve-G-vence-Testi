@@ -1,0 +1,123 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+
+namespace Kitaplar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<string, string> Kitaplar = new Dictionary<string, string>();
+            Kitaplar["Yüzüklerin Efendisi:Yüzük Kardeşliği"]="9789753425";
+            Kitaplar["Yüzüklerin Efendisi:İki Kule"]="9753421818";
+            Kitaplar["Yüzüklerin Efendisi:Kralın Dönüşü"]="9753422024";
+            Kitaplar["Dune"]="605375479X";
+            Kitaplar["Dune Çocukları"]="6053756024";
+            Kitaplar["Drizzt Efsanesi 1:Anayurt"]="6053755575";
+            Kitaplar["Drizzt Efsanesi 2:Sürgün"]="6059958133";
+            Kitaplar["Zaman Çarkı 1:Dünya Gözü"]="9758825718";
+            Kitaplar["Zaman Çarkı 2:Büyük Av"]="9758725726";
+
+            Stopwatch stopwatch = new Stopwatch();
+
+
+            Console.WriteLine("Kitap Adı Giriniz: ");
+            string Kitapadı = Console.ReadLine();
+            stopwatch.Start();
+
+            if (Kitapadı=="Yüzüklerin Efendisi:Yüzük Kardeşliği")
+            {
+                Console.WriteLine(Kitaplar["Yüzüklerin Efendisi:Yüzük Kardeşliği"]);
+            }
+
+            else if (Kitapadı == "Yüzüklerin Efendisi:İki Kule")
+            {
+                Console.WriteLine(Kitaplar["Yüzüklerin Efendisi:İki Kule"]);
+            }
+
+            else if (Kitapadı=="Yüzüklerin Efendisi:Kralın Dönüşü")
+            {
+                Console.WriteLine(Kitaplar["Yüzüklerin Efendisi:Kralın Dönüşü"]);
+            }
+
+            else if (Kitapadı == "Dune")
+            {
+                Console.WriteLine( Kitaplar["Dune"]);
+            }
+
+            else if (Kitapadı == "Dune Çocukları")
+            {
+                Console.WriteLine( Kitaplar["Dune Çocukları"]);
+            }
+
+            else if (Kitapadı == "Drizzt Efsanesi 1:Anayurt")
+            {
+                Console.WriteLine( Kitaplar["Drizzt Efsanesi 1:Anayurt"]);
+            }
+
+            else if (Kitapadı == "Drizzt Efsanesi 2:Sürgün")
+            {
+                Console.WriteLine( Kitaplar["Drizzt Efsanesi 2:Sürgün"]);
+            }
+
+            else if (Kitapadı == "Zaman Çarkı 1:Dünya Gözü")
+            {
+                Console.WriteLine( Kitaplar["Zaman Çarkı 1:Dünya Gözü"]);
+            }
+
+            else if (Kitapadı == "Zaman Çarkı 2:Büyük Av")
+            {
+                Console.WriteLine( Kitaplar["Zaman Çarkı 2:Büyük Av"]);
+            }
+
+            else
+            {
+                Console.WriteLine("Hatalı Giriş Yaptınız..");
+            }
+            stopwatch.Stop();
+            Console.WriteLine("Çalışma Süresi :" + stopwatch.Elapsed);
+           
+            stopwatch.Start();
+            switch (Kitapadı)
+            {
+                case "Yüzüklerin Efendisi:Yüzük Kardeşliği":
+                    Console.WriteLine(Kitaplar["Yüzüklerin Efendisi:Yüzük Kardeşliği"]);
+                    break;
+
+                case "Yüzüklerin Efendisi:İki Kule":
+                    Console.WriteLine(Kitaplar["Yüzüklerin Efendisi:İki Kule"]);
+                    break;
+                case "Yüzüklerin Efendisi:Kralın Dönüşü":
+                    Console.WriteLine(Kitaplar["Yüzüklerin Efendisi:Kralın Dönüşü"]);
+                    break;
+                case "Dune":
+                    Console.WriteLine(Kitaplar["Dune Çocukları"]);
+                    break;
+                case "Drizzt Efsanesi 1:Anayurt":
+                    Console.WriteLine(Kitaplar["Drizzt Efsanesi 1:Anayurt"]);
+                    break;
+                case "Drizzt Efsanesi 2:Sürgün":
+                    Console.WriteLine(Kitaplar["Drizzt Efsanesi 2:Sürgün"]);
+                    break;
+                case "Zaman Çarkı 1:Dünya Gözü":
+                    Console.WriteLine(Kitaplar["Zaman Çarkı 1:Dünya Gözü"]);
+                    break;
+                case "Zaman Çarkı 2:Büyük Av":
+                    Console.WriteLine( Kitaplar["Zaman Çarkı 2:Büyük Av"]);
+                    break;
+                default:
+                    Console.WriteLine("Hatalı Giriş Yaptınız..");
+                    break;
+            }
+            stopwatch.Stop();
+            Console.WriteLine("Çalışma zamanı :" + stopwatch.Elapsed);
+            Console.ReadKey();
+        }
+       
+    }
+}
