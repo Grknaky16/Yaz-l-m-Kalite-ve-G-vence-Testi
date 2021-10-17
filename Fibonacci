@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+namespace Fibonacci
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+
+            int n1 = 0, n2 = 1, n3, i, sayi;
+            Console.Write("Uzunluk Giriniz ");
+            sayi = int.Parse(Console.ReadLine());
+            Console.Write(n1 + " " + n2 + " ");
+            
+            stopwatch.Start();
+            for (i = 2; i < sayi; ++i)
+            {
+                n3 = n1 + n2;
+                Console.Write(n3 + " ");
+                n1 = n2;
+                n2 = n3;
+
+            }
+            stopwatch.Stop();
+
+            Console.WriteLine("\nSüresi :" + stopwatch.Elapsed);
+
+            int k = 2,j=0,l=1,m;
+            stopwatch.Start();
+            Console.Write("0 1",j,l);
+            do
+            {
+                m = j + l;
+                Console.Write(" "+ m);
+                j = l;
+                l = m;
+                k++;
+
+            } while (k < sayi);
+            stopwatch.Stop();
+
+            Console.WriteLine("\nDp While Gecen süre : "+stopwatch.Elapsed);
+        
+
+            int a = 2, b = 0, c = 1, v;
+
+            Console.Write("0 1", b, c);
+            stopwatch.Start();
+            while (a < sayi)
+            {
+                v = b + c;
+                Console.Write(" " + v);
+                b = c;
+                c = v;
+                a++;
+            }
+            stopwatch.Stop();
+
+            Console.WriteLine("\nWhile Gecen süre : " + stopwatch.Elapsed);
+
+            Console.ReadKey();
+        }
+    }
+}
