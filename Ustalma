@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+namespace Üstalma
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            int sayi1, sayi2, carp=1;
+            Console.Write("Sayıyı giriniz: ");
+            sayi1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Üstü giriniz:");
+            sayi2=Convert.ToInt32(Console.ReadLine());
+            if (sayi2 == 0)
+            {
+                Console.WriteLine("Cevap=1");
+            }
+            else
+            {
+                stopwatch.Start();
+                for (int i = 0; i<=sayi2; i++)
+                {
+                    carp = carp * sayi1;
+
+                }
+                stopwatch.Stop();
+                Console.WriteLine("Sonuc ="+ carp);
+                Console.WriteLine("İşlem Süresi: "+ stopwatch.Elapsed);
+            }
+
+            double sayi3, sayi4, sonuc;
+            stopwatch.Start();
+            Console.Write("Sayıyı giriniz: ");
+            sayi3 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Üstü giriniz:");
+            sayi4 = Convert.ToDouble(Console.ReadLine());
+            sonuc = Math.Pow(sayi3, sayi4);
+            Console.WriteLine("Sonuc :" + sonuc);
+            stopwatch.Stop();
+            Console.WriteLine("İşlem Süresi :"+ stopwatch.Elapsed);
+            Console.ReadKey();
+        }
+    }
+}
